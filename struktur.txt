@@ -1,0 +1,136 @@
+bantuananakyatimuna2/
+│
+├─ pages/
+│  │
+│  ├─ user/                     ← layout untuk role admin (back office)
+│  │  ├─ header.php             ← head, link CSS, judul halaman
+│  │  ├─ navbar.php             ← navigasi atas admin
+│  │  ├─ sidebar.php            ← sidebar menu admin (kelola dashboard asal, jabatan, user, penerima, merk, posisi,kategori, bantuan, komentar, penerimaan, pengembalian, laporan)
+│  │  ├─ sidebarpetugas.php     ← sidebarpetugas menu petugas (sama seperti admin, kecuali USER)
+│  │  └─ footer.php             ← script JS dan footer dashboard
+│  │
+│  ├─ penerima/                 ← layout untuk role penerima (back office)
+│  │  ├─ header.php
+│  │  ├─ navbar.php
+│  │  └─ footer.php
+│  │
+│  └─ landing/                  ← layout tampilan publik (front office / portal berita)
+│     ├─ header.php             ← head HTML umum, meta tag SEO, CSS portal
+│     ├─ navbar.php             ← menu utama (Home, Kategori, Tentang, Login)
+│     ├─ hero.php             
+│     ├─ footer.php             ← footer publik, hak cipta, JS
+│     └─ sidebar-right.php      ← opsional: widget, tag cloud, iklan, dsb.
+││
+├─ assets/
+│  ├─ dist/                     ← komponen utama AdminLTE (CSS, JS, icons, dsb)
+│  │  ├─ css/
+│  │  ├─ js/
+│  │  └─ img/
+│  │
+│  └─ pluggins/                  ← plugin tambahan AdminLTE (chart, datatables, wysiwyg, dsb)
+│     ├─ datatables/
+│     ├─ chartjs/
+│     └─ summernote/
+│
+├─ views/
+│  │
+│  ├─ otentikasiuser/           ← halaman otentikasi (login, register, logout) untuk user dari tabel user
+│  │  ├─ loginuser.php              ← form login user (admin/petugas)
+│  │  ├─ registeruser.php           ← form pendaftaran (opsional)
+│  │  ├─ logoutuser.php             ← proses logout (hapus session)
+│  │  └─ prosesloginuser.php        ← proses backend login (cek ke DB, set session)
+│  │
+│  ├─ otentikasipenerima/       ← halaman otentikasi (login, register, logout) untuk penerima dari tabel penerima
+│  │  ├─ loginpenerima.php              ← form login penerima (penerima)
+│  │  ├─ registerpenerima.php           ← form pendaftaran (opsional)
+│  │  ├─ prosesregisterpenerima.php     ← proses pendaftaran (opsional)
+│  │  ├─ logoutpenerima.php             ← proses logout (hapus session)
+│  │  └─ prosesloginpenerima.php        ← proses backend login (cek ke DB, set session)
+│  │
+│  ├─ user/                     ← bantuan dashboard untuk user login (extend dari pages/user atau pages/penerima)
+│  │  │
+│  │  ├─ user/
+│  │  │  ├─ prosesuser.php      ← logic CRUD user
+│  │  │  ├─ daftaruser.php      ← list user untuk admin
+│  │  │  ├─ tambahuser.php      ← form tambah user
+│  │  │  └─ edituser.php        ← form edit user
+│  │  │
+│  │  ├─ bantuan/
+│  │  │  ├─ prosesbantuan.php    ← logic CRUD bantuan
+│  │  │  ├─ daftarbantuan.php
+│  │  │  ├─ tampilbantuan.php
+│  │  │  ├─ tambahbantuan.php
+│  │  │  └─ editbantuan.php
+│  │  │
+│  │  ├─ komentar/
+│  │  │  ├─ proseskomentar.php    ← logic CRUD komentar
+│  │  │  ├─ daftarkomentar.php
+│  │  │  ├─ tambahkomentar.php
+│  │  │  └─ editkomentar.php
+│  │  │
+│  │  ├─ penerima/
+│  │  │  ├─ prosespenerima.php    ← logic CRUD penerima
+│  │  │  ├─ daftarpenerima.php
+│  │  │  ├─ tampilpenerima.php
+│  │  │  ├─ tambahpenerima.php
+│  │  │  └─ editpenerima.php
+│  │  │
+│  │  ├─ penerimaan/
+│  │  │  ├─ prosespenerimaan.php    ← logic CRUD penerimaan
+│  │  │  ├─ daftarpenerimaan.php
+│  │  │  ├─ tambahpenerimaan.php
+│  │  │  └─ editpenerimaan.php
+│  │  │
+│  │  │
+│  │  ├─ laporan/
+│  │  │  ├─ daftarlaporan.php
+│  │  │  └─ cetaklaporan.php
+│  │  │
+│  │  ├─ dashboardadmin.php     ← dashboard utama untuk admin
+│  │  └─ dashboardpetugas.php    ← dashboard utama untuk penerima tidak boleh ada kolola user
+│  │
+│  ├─ penerima/                 ← bantuan dashboard untuk user login (extend dari pages/user atau pages/penerima)
+│  │  ├─ dashboardpenerima.php              
+│  │  ├─ tambahpenerimaan.php              
+│  │  ├─ riwayatpenerimaan.php              
+│  │  └─ prosespenerimaan.php        
+│  │
+│  ├─ notfound.php           ← halaman notfound untuk akun penerima dan user (admin dan petugas) yang sudah login
+│  │
+│  └─ landing/                  ← tampilan publik (extend dari pages/landing)
+│     ├─ home.php               ← halaman utama portal (daftar artikel)
+│     ├─ detilbantuan.php          ← halaman detail artikel
+│     ├─ kategori.php           ← daftar artikel per kategori
+│     ├─ tentang.php            ← halaman tentang CMS
+│     ├─ kontak.php             ← halaman kontak (opsional)
+│     ├─ 404.php                ← halaman notfound untuk semua role yang belum login (public)
+│     └─ proseskomentar.php     ← logic komentar publik (insert & tampil)
+│
+│
+├─ includes/                    ← fungsi & keamanan (dibaca semua halaman)
+│  ├─ koneksi.php               ← koneksi database (utama)
+│  ├─ konfig.php                ← variabel global (base_url, site_name, dll)
+│  ├─ path.php                  
+│  ├─ ceksession.php            ← pengecekan login, redirect jika belum loginuser
+│  ├─ ceksessionpenerima.php    ← pengecekan login, redirect jika belum loginpenerima
+│  ├─ fungsiupload.php          ← helper upload gambar (validasi tipe & ukuran)
+│  ├─ fungsivalidasi.php        ← sanitasi input & validasi form
+│  └─ htaccess/                 ← file keamanan .htaccess untuk referensi
+│
+│
+├─ database/
+│  └─ cmsmahdi.sql              ← file dump struktur database (opsional)
+│
+├─ uploads/                     ← penyimpanan file publik (gambar user & bantuan)
+│  ├─ user/                     ← foto profil user
+│  ├─ penerima/                 ← foto profil penerima
+│  ├─ bantuan/                     ← gambar bantuan
+│  ├─ penerimaan/               ← gambar penerimaan
+│  ├─ komentar/                 ← gambar dari komentar (opsional)
+│  └─ .htaccess                 ← keamanan: blok eksekusi file PHP
+│
+├─ dashboard.php                ← pusat halaman backend (routing admin/penerima)
+├─ index.php                    ← pusat halaman publik (routing landing)
+├─ .htaccess                    ← redirect URL, blok akses direktori penting
+├─ README.md                    ← dokumentasi umum proyek
+└─ struktur.txt                 ← dokumentasi struktur folder (file ini)
