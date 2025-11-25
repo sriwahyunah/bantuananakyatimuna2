@@ -98,7 +98,7 @@ include __DIR__ . "/../../../includes/koneksi.php";
                                         <a href="?hal=bantuan/hapusbantuan&id=<?= $row['id']; ?>"
                                             class="btn btn-danger btn-sm"
                                             onclick="return confirm('Yakin ingin menghapus data ini?')">
-                                            🗑 Hapus
+                                            🗑 Hapuss
                                         </a>
 
                                     </td>
