@@ -1,7 +1,3 @@
-<?php
-include 'koneksi.php';
-?>
-
 <!-- Main content -->
 <section class="content">
 

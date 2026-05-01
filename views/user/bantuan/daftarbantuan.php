@@ -1,8 +1,5 @@
 <?php
-// Koneksi database (sesuaikan)
 include __DIR__ . "/../../../includes/koneksi.php";
-
-
 ?>
 
 <!DOCTYPE html>

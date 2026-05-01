@@ -4,7 +4,7 @@
 // Mengikuti pola dashboard peminjam (plug-and-play)
 // ============================================================
 
-require_once __DIR__ . '/../../includes/path.php';
+require_once __DIR__ . '/../includes/path.php';
 require_once INCLUDES_PATH . 'konfig.php';
 require_once INCLUDES_PATH . 'koneksi.php';
 

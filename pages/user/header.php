@@ -7,22 +7,21 @@ require_once INCLUDES_PATH . 'ceksession.php';
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= htmlspecialchars($site_name) ?> — Dashboard</title>
 
-    <!-- AdminLTE -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>assets/dist/css/adminlte.min.css">
+    <title>Dashboard - <?= $site_name ?></title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/plugins/fontawesome-free/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/plugins/bootstrap/css/bootstrap.min.css">
 
-    <!-- Custom -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>assets/dist/css/custom.css">
+    <!-- AdminLTE -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/dist/css/adminlte.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+
